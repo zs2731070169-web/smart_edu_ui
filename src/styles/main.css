@@ -1,0 +1,89 @@
+@import './tokens.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-1);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--surface-page);
+  /* 笔记本暖纸：上下渐变 + 角落柔光 */
+  background-image:
+    radial-gradient(900px 600px at 10% -10%, rgba(31, 85, 68, 0.18), transparent 60%),
+    radial-gradient(800px 700px at 110% 0%, rgba(224, 164, 88, 0.18), transparent 55%),
+    radial-gradient(700px 700px at 50% 120%, rgba(31, 85, 68, 0.10), transparent 60%),
+    linear-gradient(180deg, #f5ecd3 0%, #f0e4c2 100%);
+  overflow: hidden;
+}
+
+/* 笔记本网点底纹（fixed，全局） */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+  background-image:
+    radial-gradient(rgba(31, 85, 68, 0.16) 1px, transparent 1px);
+  background-size: 22px 22px;
+  background-position: 0 0;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+/* 滚动条 */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: rgba(31, 85, 68, 0.22);
+  border-radius: 4px;
+}
+*::-webkit-scrollbar-thumb:hover { background: rgba(31, 85, 68, 0.42); }
+
+/* 选择高亮 */
+::selection {
+  background: var(--honey-300);
+  color: var(--ivy-900);
+}
+
+/* 通用动画 */
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.45; transform: scale(0.85); }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
+/* Element Plus 微调 */
+.el-message {
+  font-family: var(--font-body);
+  border-radius: var(--radius-md) !important;
+  border: 1px solid var(--line) !important;
+  box-shadow: var(--shadow-card) !important;
+}

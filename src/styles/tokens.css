@@ -1,0 +1,87 @@
+/* ============================================================
+   设计令牌 · 「现代学堂」
+   暖纸卡 + 学府墨绿 + 蜂蜜琥珀 + 笔记本网点
+   面向"教育智能助手"：可信、温暖、专业、易于发问
+============================================================ */
+:root {
+  /* —— 主色：学府墨绿 —— */
+  --ivy-900: #0f2a23;
+  --ivy-800: #143b30;
+  --ivy-700: #1f5544;   /* 主色 */
+  --ivy-600: #2d6a5a;
+  --ivy-500: #3f8472;
+  --ivy-400: #6da896;
+  --ivy-200: #c4dcd3;
+  --ivy-100: #e2eee9;
+
+  /* —— 强调：蜂蜜琥珀 —— */
+  --honey-700: #a06320;
+  --honey-600: #c47a2a;
+  --honey-500: #e0a458;
+  --honey-300: #f1cd95;
+  --honey-100: #f8e6c8;
+
+  /* —— 纸面 —— */
+  --paper-50:  #fdfaf2;
+  --paper-100: #f8f1de;
+  --paper-200: #f1e7c9;
+  --paper-300: #e2d4a8;
+
+  /* —— 中性 —— */
+  --slate-900: #0f1c19;
+  --slate-700: #2c3a36;
+  --slate-500: #5d6e69;
+  --slate-400: #7e8f8a;
+  --slate-300: #a8b6b2;
+  --slate-200: #d3dcd8;
+
+  /* —— 提示色 —— */
+  --rose-600: #b94a3e;
+  --rose-100: #f6dad4;
+  --leaf-500: #5fa873;
+
+  /* —— 表面 —— */
+  --surface-page: #f5ecd3;
+  --surface-card: #ffffff;
+  --surface-soft: #fbf7ea;
+  --line: rgba(15, 28, 25, 0.10);
+  --line-strong: rgba(15, 28, 25, 0.18);
+
+  /* —— 文字 —— */
+  --text-1: var(--slate-900);
+  --text-2: var(--slate-500);
+  --text-3: var(--slate-400);
+  --text-on-dark: #f5ecd3;
+
+  /* —— 字体 —— */
+  --font-display: 'Fraunces', 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+  --font-body: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'PingFang SC',
+    'Microsoft YaHei', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  /* —— 阴影 —— */
+  --shadow-card: 0 1px 0 rgba(15, 28, 25, 0.04),
+                 0 20px 40px -24px rgba(15, 28, 25, 0.30),
+                 0 40px 80px -40px rgba(15, 28, 25, 0.18);
+  --shadow-bubble: 0 1px 2px rgba(15, 28, 25, 0.06),
+                   0 10px 22px -16px rgba(15, 28, 25, 0.28);
+  --shadow-soft: 0 4px 14px rgba(15, 28, 25, 0.08);
+  --shadow-press: inset 0 0 0 1px rgba(15, 28, 25, 0.08);
+
+  /* —— 圆角 —— */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
+
+  /* —— Element Plus 主题对齐 —— */
+  --el-color-primary: var(--ivy-700);
+  --el-color-primary-light-3: var(--ivy-500);
+  --el-color-primary-light-5: var(--ivy-400);
+  --el-color-primary-light-7: var(--ivy-200);
+  --el-color-primary-light-9: var(--ivy-100);
+  --el-color-success: var(--leaf-500);
+  --el-color-warning: var(--honey-600);
+  --el-color-danger: var(--rose-600);
+  --el-font-family: var(--font-body);
+}
